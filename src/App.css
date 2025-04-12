@@ -5,7 +5,7 @@ body {
   display: flex; 
   justify-content: center; 
   align-items: center;
-  background-color: #1a898d; 
+  background-color: #95a1a1; 
 }
 
 
@@ -15,14 +15,14 @@ body {
   padding: 20px;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
-  background-color: #4d9910; 
+  background-color: #0fa6ac; 
   border-radius: 8px; 
-  box-shadow: 0 2px 10px rgba(175, 53, 139, 0.1); 
+  box-shadow: 0 2px 10px rgba(110, 9, 77, 0.1); 
 }
 
 h1 {
   text-align: center;
-  color: #08d33b; 
+  color: #050806; 
 }
 
 form {
@@ -44,7 +44,7 @@ input {
 
 button {
   padding: 10px;
-  background-color: #007bff;
+  background-color: #bd0eae2d;
   color: rgb(206, 108, 16);
   border: none;
   cursor: pointer;
@@ -67,7 +67,7 @@ th, td {
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #2a9ecc;
 }
 
 @media (max-width: 600px) {
