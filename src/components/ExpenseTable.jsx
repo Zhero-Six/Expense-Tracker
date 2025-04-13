@@ -6,13 +6,19 @@ const ExpenseTable = ({ expenses, onSort, onDelete }) => {
       <thead>
         <tr>
           <th>
+            Expense Name{' '}
+            <button onClick={() => onSort('expenseName')}>Sort</button>
+          </th>
+          <th>
             Description{' '}
             <button onClick={() => onSort('description')}>Sort</button>
           </th>
-          <th>Amount</th>
           <th>
-            Category <button onClick={() => onSort('category')}>Sort</button>
+            Category{' '}
+            <button onClick={() => onSort('category')}>Sort</button>
           </th>
+          <th>Amount</th>
+          <th>Date</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -20,9 +26,11 @@ const ExpenseTable = ({ expenses, onSort, onDelete }) => {
         {expenses.length > 0 ? (
           expenses.map((expense, index) => (
             <tr key={index}>
+              <td>{expense.expenseName}</td>
               <td>{expense.description}</td>
-              <td>${parseFloat(expense.amount).toFixed(2)}</td>
               <td>{expense.category}</td>
+              <td>{expense.amount.toFixed(2)}</td>
+              <td>{expense.date}</td>
               <td>
                 <button onClick={() => onDelete(index)}>Delete</button>
               </td>
@@ -30,7 +38,7 @@ const ExpenseTable = ({ expenses, onSort, onDelete }) => {
           ))
         ) : (
           <tr>
-            <td colSpan="4">No expenses found</td>
+            <td colSpan="6">No expenses found</td>
           </tr>
         )}
       </tbody>
